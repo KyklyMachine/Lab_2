@@ -12,7 +12,6 @@
 #include <complex>
 #include "ArraySequence.hpp"
 
-const string DIM_ERROR = "Dimensions are not the equal";
 
 template <typename T> class Vector{
 private:
@@ -58,7 +57,7 @@ public:
     }
     Vector<T>* SumOfVectors(Vector<T>* v){
         if (this->GetDim() != v->GetDim())
-            throw length_error(DIM_ERROR);
+            throw length_error("Dimensions are not the equal");
         auto* new_vector = new Vector<T>;
         T item;
         for(int i = 0; i < this->GetDim(); i++){
@@ -78,7 +77,7 @@ public:
     };
     T ScalarMult(Vector<T>* v){
         if (this->GetDim() != v->GetDim())
-            throw out_of_range(DIM_ERROR);
+            throw out_of_range("Dimensions are not the equal");
         T sum = this->GetCoord(0) * v->GetCoord(0);
         for(int i = 1; i < this->GetDim(); i++){
             sum += this->GetCoord(i) * v->GetCoord(i);

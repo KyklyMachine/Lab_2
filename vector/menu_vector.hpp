@@ -14,7 +14,7 @@ using namespace std;
 
 #include "vector.hpp"
 
-int chooseFunction(){
+int chooseVectorFunction(){
     int func;
     cout << "What function do you want to use?: \n"
          << "\t1: Sum of Vectors\n"
@@ -67,7 +67,7 @@ void MenuVector(){
         }
         if (type == 1) {
             while (true) {
-                int function = chooseFunction();
+                int function = chooseVectorFunction();
                 if (function == 1) {
                     cout << "Enter 1 vector:" << endl;
                     auto* vect1 = inputVector<int>();
@@ -114,7 +114,7 @@ void MenuVector(){
         }
         else if (type == 2) {
             while(true) {
-                int function = chooseFunction();
+                int function = chooseVectorFunction();
                 if (function == 1) {
                     cout << "Enter 1 vector:" << endl;
                     auto *vect1 = inputVector<double>();
@@ -161,7 +161,7 @@ void MenuVector(){
         }
         else if (type == 3) {
             while(true) {
-                int function = chooseFunction();
+                int function = chooseVectorFunction();
                 if (function == 1) {
                     cout << "Enter 1 vector:" << endl;
                     auto *vect1 = inputComplexVector();

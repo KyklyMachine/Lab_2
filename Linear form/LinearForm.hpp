@@ -8,8 +8,6 @@
 #include <complex>
 #include "ArraySequence.hpp"
 
-const string DIM_ERROR1 = "Dimensions are not the equal";
-
 
 template <typename T> class LinearForm{
 private:
@@ -132,10 +130,10 @@ public:
     T GetValue(LinearForm<T>* v){
         T item = 0;
         if (this->GetDim() > v->GetDim()){
-            throw out_of_range(DIM_ERROR1);
+            throw out_of_range("Dimensions are not the equal");
         }
         else if(this->GetDim() < v->GetDim()){
-            throw out_of_range(DIM_ERROR1);
+            throw out_of_range("Dimensions are not the equal");
         }
         else if(this->GetDim() == v->GetDim()){
             item = this->linearform->Get(0) * v->linearform->Get(0);

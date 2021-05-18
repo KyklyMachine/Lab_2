@@ -22,7 +22,7 @@ int chooseType(){
     return type;
 }
 
-int chooseFunctionLF(){
+int chooseLFFunction(){
     int func;
     cout << "What function do you want to use?: \n"
          << "\t1: Sum of Linears form\n"
@@ -76,7 +76,7 @@ void MenuLinearForm(){
         }
         if (type == 1) {
             while (true) {
-                int function = chooseFunctionLF();
+                int function = chooseLFFunction();
                 if (function == 1) {
                     cout << "Enter 1 linear form:" << endl;
                     auto* lf1 = inputLinearForm<int>();
@@ -128,7 +128,7 @@ void MenuLinearForm(){
         }
         else if (type == 2) {
             while(true) {
-                int function = chooseFunctionLF();
+                int function = chooseLFFunction();
                 if (function == 1) {
                     cout << "Enter 1 linear form:" << endl;
                     auto *lf1 = inputLinearForm<double>();
@@ -177,7 +177,7 @@ void MenuLinearForm(){
         }
         else if (type == 3) {
             while(true) {
-                int function = chooseFunctionLF();
+                int function = chooseLFFunction();
                 if (function == 1) {
                     cout << "Enter 1 linear form:" << endl;
                     auto *lf1 = inputComplexLinearForm();
